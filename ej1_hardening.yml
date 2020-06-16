@@ -1,0 +1,25 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Se define estado de SELINUX en enforcing
+    selinux:
+      policy: targeted
+      state: enforcing
+      
+      
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Se remueve nmap en todos los servidores Linux
+    package: 
+      name: nmap
+      state: absent 
+
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: desinstalar gcc a traves de package a todos los linux
+    package:
+      name: gcc
+      state: absent
