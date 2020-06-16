@@ -11,5 +11,3 @@
         comment: John Wick
         uid: 1040
         group: "{{ group }}"
-      register: out_lines
-    - debug: var=out_lines
