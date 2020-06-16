@@ -1,9 +1,10 @@
+
 ---
-- name: playbook para mesa de ayuda
+- hosts: all
   become: yes
   gather_facts: no
-  hosts: all
   tasks:
-    yum:
-        name: "{{ paquete }}"
-        state: "{{ action }}"
+  - name: playbook para mesa
+    package: 
+      name: "{{ paquete }}"
+      state: "{{ action }}"
