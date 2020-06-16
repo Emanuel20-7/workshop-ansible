@@ -1,6 +1,6 @@
 ---
 - name: Check state of the services 
-  hosts: monitoreo.b2cloud.com.ar
+  hosts: all
   become: true
   gather_facts: true
 
