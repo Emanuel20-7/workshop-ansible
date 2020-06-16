@@ -1,0 +1,14 @@
+####################################
+#                                  #
+#    Current status report         #
+#                                  #
+####################################
+{% for host in ansible_play_batch %}
+
+- The server name is:
+  {{ hostvars[host].ansible_hostname }}
+  Kernel version {{ hostvars[host].ansible_kernel }}
+  Distribution {{ hostvars[host].ansible_distribution }} {{ hostvars[host].ansible_distribution_version }}
+
+{% endfor %}
+Report created by Ansible
