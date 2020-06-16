@@ -1,5 +1,5 @@
 ---
-- name: acción {{ action }} {{ paquete }}
+- name: playbook para mesa de ayuda
   become: yes
   gather_facts: no
   hosts: all
