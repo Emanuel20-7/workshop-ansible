@@ -1,0 +1,12 @@
+---
+- name: Report Kernel version
+  hosts: azure
+  become: true
+  gather_facts: true
+
+  tasks: 
+    - name: Fill whit hostvars
+      template:
+        src:  report.j2
+        dest: kernel-release-report.txt
+      delegate_to: localhost
