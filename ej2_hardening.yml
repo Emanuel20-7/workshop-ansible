@@ -1,20 +1,20 @@
 ---
 - name: Hardening whit SELINUX
-  hosts: 
+  hosts:
   become: true
   gather_facts: no
-  
+
   tasks:
-  
+
   - name: Se define estado de SELINUX en enforcing
     selinux:
       policy: targeted
       state: enforcing
-      
+
   - name: Se remueve nmap en todos los servidores Linux
-    package: 
+    package:
       name: nmap
-      state: absent 
+      state: absent
 
   - name: desinstalar gcc a traves de package a todos los linux
     package:

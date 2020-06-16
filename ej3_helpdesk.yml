@@ -1,7 +1,6 @@
-
 ---
 - name: Instalacion de paquete web service
-  hosts: 
+  hosts:
   become: true
   gather_facts: no
 
@@ -9,5 +8,5 @@
 
   - name: playbook para mesa de ayuda con variables para Survey en Ansible Tower
     package:
-      name: "{{ paquete }}"
+      name:  "{{ paquete }}"
       state: "{{ accion }}"
