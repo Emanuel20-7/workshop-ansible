@@ -1,11 +1,11 @@
 ---
 - name: Report Kernel version
-  hosts: all
+  hosts: 
   become: true
   gather_facts: true
 
   tasks: 
-    - name: Fill whit hostvars
+    - name: Fill whit var jinja2
       template:
         src:  report.j2
         dest: kernel-release-report.txt
