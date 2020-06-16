@@ -1,6 +1,6 @@
 ---
-- name: Installed firewalld
-  hosts: web
+- name: Start service for apache & firewalld
+  hosts: 
   become: true
 
   tasks:
