@@ -1,9 +1,9 @@
 ---
-- name: "acción {{ action }} {{ paquete }}"
+- name: acción {{ action }} {{ paquete }}
   become: yes
   gather_facts: no
   hosts: all
   tasks:
     yum:
-        name: "  {{ paquete }} "
-        state: " {{ action }} "
+        name: "{{ paquete }}"
+        state: "{{ action }}"
