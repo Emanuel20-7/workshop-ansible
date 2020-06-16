@@ -1,0 +1,19 @@
+---
+- name: Check state of the services 
+  hosts: monitoreo.b2cloud.com.ar
+  become: true
+  gather_facts: true
+
+  tasks:
+
+     - name: Get all services
+       service_facts:
+     - debug:
+         var: ansible_facts.services["httpd.service"]
+       register: output_result
+
+     - name: Print the result on file.txt
+       template:
+         src: httpd-service.j2
+         dest: report-status-httpd.txt
+       delegate_to: localhost
