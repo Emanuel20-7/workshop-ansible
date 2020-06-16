@@ -1,6 +1,6 @@
 ---
 - name: Create user "{{ user }}"
-  hosts: all
+  hosts: 
   gather_facts: true
 
   tasks:
