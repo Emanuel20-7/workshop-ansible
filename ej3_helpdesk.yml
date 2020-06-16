@@ -1,0 +1,4 @@
+- name: acción {{ action }} {{ paquete }}
+  yum:
+    name: {{ paquete }}
+    state: {{ action }} 
