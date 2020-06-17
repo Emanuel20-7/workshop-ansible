@@ -1,10 +1,10 @@
 ---
 - name: Report Kernel version
-  hosts: 
+  hosts: all
   become: true
   gather_facts: true
 
-  tasks: 
+  tasks:
     - name: Fill whit var jinja2
       template:
         src:  report.j2
