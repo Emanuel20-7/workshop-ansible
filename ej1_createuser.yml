@@ -6,8 +6,9 @@
 
   tasks:
 
-    - name: Add the user ""{{ user }}" with uid and primary group
+    - name: Add the user "{{ user }}" with uid and primary group
       user:
         name: "{{ user }}"
         comment: John Wick
+        group: "{{ group }}"
         uid: 1040
