@@ -1,0 +1,12 @@
+---
+- name: Remove user "{{ user }}"
+  hosts: all
+  gather_facts: true
+
+  tasks:
+
+    - name: Rmoeve the user "{{ user }}" with uid and primary group
+      user:
+        name: "{{ user }}"
+        state: absent
+        remove: yes
