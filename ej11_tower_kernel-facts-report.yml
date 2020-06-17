@@ -9,5 +9,5 @@
     - name: Fill whit var jinja2
       template:
         src:  report.j2
-        dest: kernel-release-report.txt
+        dest: /tmp/kernel-release-report.txt
 #      delegate_to: localhost
