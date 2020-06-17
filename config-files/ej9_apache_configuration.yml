@@ -28,8 +28,8 @@
       dest: /etc/httpd/conf/httpd.conf
     notify: apache-restart
 
-  - name: Deploy index.html
+  - name: Deploy index.html from template
     template:
-      src: index.html.j2
-      dest: "{{ stage }}_index.html.j2"
+      src: "{{ stage }}_index.html.j2"
+      dest: /var/www/html/index.html
     notify: apache-restart
