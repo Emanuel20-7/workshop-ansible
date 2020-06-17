@@ -5,11 +5,6 @@
 
   tasks:
 
-  - name: Install Apache
-    yum:
-      name: httpd
-      state: latest
-
   - name: latest firewalld version installed
     yum:
       name: firewalld
