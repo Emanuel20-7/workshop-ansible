@@ -1,6 +1,6 @@
 ---
 - name: Instalacion de paquete web service
-  hosts:
+  hosts: all
   become: true
   gather_facts: no
 

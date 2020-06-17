@@ -1,6 +1,6 @@
 ---
 - name: Apache server installed
-  hosts:
+  hosts: all
   become: true
 
   tasks:

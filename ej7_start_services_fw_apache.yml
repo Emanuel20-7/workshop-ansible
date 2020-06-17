@@ -1,6 +1,6 @@
 ---
 - name: Start service for apache & firewalld
-  hosts: 
+  hosts: all
   become: true
 
   tasks:

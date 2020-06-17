@@ -1,6 +1,6 @@
 ---
 - name: Create user "{{ user }}"
-  hosts:
+  hosts: all
   bocome: true
   gather_facts: true
 

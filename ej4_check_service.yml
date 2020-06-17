@@ -1,6 +1,6 @@
 ---
-- name: Check state of the services 
-  hosts: 
+- name: Check state of the services
+  hosts: all
   become: true
   gather_facts: true
 

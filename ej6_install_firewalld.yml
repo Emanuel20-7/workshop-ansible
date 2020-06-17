@@ -1,6 +1,6 @@
 ---
 - name: Installed firewalld
-  hosts: 
+  hosts: all
   become: true
 
   tasks:
