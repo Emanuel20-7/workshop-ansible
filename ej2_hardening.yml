@@ -6,17 +6,17 @@
 
   tasks:
 
-  - name: Se define estado de SELINUX en enforcing
+  - name: State of SELINUX en enforcing
     selinux:
       policy: targeted
       state: enforcing
 
-  - name: Se remueve nmap en todos los servidores Linux
+  - name: Nmap is removed on all servers Linux
     package:
       name: nmap
       state: absent
 
-  - name: desinstalar gcc a traves de package a todos los linux
+  - name: uninstall gcc through package to all linux
     package:
       name: gcc
       state: absent

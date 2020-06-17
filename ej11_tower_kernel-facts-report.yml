@@ -6,8 +6,9 @@
   gather_facts: true
 
   tasks:
-    - name: Fill whit var jinja2
-      template:
-        src:  report.j2
-        dest: /tmp/kernel-release-report.txt
-#      delegate_to: localhost
+    - name: Print facts
+      debug:
+        msg: The server name is
+        {{ hostvars[host].ansible_hostname }}
+        Kernel version {{ hostvars[host].ansible_kernel }}
+        Distribution {{ hostvars[host].ansible_distribution }} {{ hostvars[host].ansible_distribution_version }}
