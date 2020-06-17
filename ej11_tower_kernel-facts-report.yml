@@ -9,6 +9,6 @@
     - name: Print facts
       debug:
         msg: The server name is
-        {{ ansible_hostname }}
-        Kernel version {{ ansible_kernel }}
-        Distribution {{ ansible_distribution }} {{ ansible_distribution_version }}
+        "{{ ansible_hostname }}"
+        Kernel version "{{ ansible_kernel }}"
+        Distribution "{{ ansible_distribution }}" "{{ ansible_distribution_version }}"
