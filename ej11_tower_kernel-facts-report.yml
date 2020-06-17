@@ -1,7 +1,6 @@
 ---
 - name: Report Kernel version
   hosts: all
-  connection: local
   become: true
   gather_facts: true
 
@@ -9,7 +8,7 @@
 
     - name: Print facts
       debug:
-        msg: 
+        msg:
          - "The server name is {{ ansible_hostname }}"
     - debug:
         msg:

@@ -1,7 +1,6 @@
 ---
 - name: Hardening whit SELINUX
   hosts: all
-  become: true
   gather_facts: no
 
   tasks:
