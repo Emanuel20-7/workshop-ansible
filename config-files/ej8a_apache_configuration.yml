@@ -1,0 +1,35 @@
+---
+- name: Latest Apache version installed
+  hosts: all
+  gather_facts: true
+
+  tasks:
+
+  - name: Install Apache
+    yum:
+      name: httpd
+      state: latest
+      notify: apache-restart
+
+  - name: latest firewalld version installed
+    yum:
+      name: firewalld
+      state: latest
+
+  - name: Apache enabled and running
+    service:
+      name: httpd
+      enabled: true
+      state: started
+
+  - name: Ensure proper Apache configuration
+    copy:
+      src: httpd.conf
+      dest: /etc/httpd/conf/httpd.conf
+    notify: apache-restart
+
+  - name: Deploy index.html
+    template:
+      src: index.html.j2
+      dest: "{{ stage }}_index.html.j2"
+    notify: apache-restart
