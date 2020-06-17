@@ -2,7 +2,6 @@
 - name: Installed firewalld
   hosts: all
 
-
   tasks:
 
   - name: latest firewalld version installed
