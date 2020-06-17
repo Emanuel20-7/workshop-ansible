@@ -9,7 +9,6 @@
     yum:
       name: httpd
       state: latest
-      notify: apache-restart
 
   - name: latest firewalld version installed
     yum:
@@ -26,10 +25,8 @@
     copy:
       src: httpd.conf
       dest: /etc/httpd/conf/httpd.conf
-    notify: apache-restart
 
   - name: Deploy index.html
     template:
       src: index.html.j2
       dest: /var/www/html/index.html
-    notify: apache-restart
