@@ -9,5 +9,5 @@
      - name: Get all services
        service_facts:
      - debug:
-         var: ansible_facts.services["httpd.service"]
+         var: ansible_facts.services["apache.service"]
        register: output_result
