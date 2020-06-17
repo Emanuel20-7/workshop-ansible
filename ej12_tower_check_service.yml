@@ -1,0 +1,13 @@
+---
+- name: Check state of the services
+  hosts: all
+  become: true
+  gather_facts: true
+
+  tasks:
+
+     - name: Get all services
+       service_facts:
+     - debug:
+         var: ansible_facts.services["httpd.service"]
+       register: output_result
